@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title>inputli.st</title>
+  <link href="input.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrapper">  
+  
+  <header>
+    <h1><a href="http://inputli.st/">inputli.st</a></h1>
+    <h3>by <a href="mailto:mike@inputli.st">Mike Manewitz</a></h3>
+  </header>
+  
+  <table id="input-list" class="list-inputs">
+    <tr>
+      <th>ch</th>
+      <th>source</th>
+      <th>mic</th>
+      <th>mic stand</th>
+    </tr>
+
+  </table>
+  
+  <br>
+  <br>
+  
+  <input type="text"  placeholder="ch #"   name="channel"  id="channel"  class="field" size="2">
+  <input type="text"  placeholder="name"   name="name"     id="name"     class="field">
+  <input type="text"  placeholder="mic"    name="mic"      id="mic"      class="field">
+  <input type="text"  placeholder="stand"  name="stand"    id="stand"    class="field">
+  
+  <input type="checkbox" name="provided" id="provided" class="field">
+  <label for="provided">provided by artist?</label>
+  <br>
+
+  <input type="submit" id="add-input" value="Add Input">
+  
+  <footer>
+    © 2013 Mike Manewitz
+    <br>
+    <a href="mailto:mike@inputli.st">email</a> | <a href="http://github.com/manewitz/inputli.st">github</a>
+  </footer>
+  
+    <script src="lib/jquery-1.9.0.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/backbone-min.js"></script>
+    <script src="input.js"></script>
+  
+</div>
+</body>
+</html>

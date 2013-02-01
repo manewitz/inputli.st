@@ -1,0 +1,92 @@
+/** { border: 1px solid grey;}*/
+
+html {
+  font-family: "Abel", sans-serif; }
+  
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abel'), local('Abel-Regular'), url(lib/abel.woff) format('woff');
+}
+
+body {
+  background-color: #efd5a7;
+  color: #dadada; }
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #ff0036;
+}
+
+div.wrapper {
+  background-color: white;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  padding: 20px;
+  width: 85%; }
+
+  h1 {
+    margin-bottom: 0px;
+  }
+
+  h3{
+    color: #8e001e;
+    margin-top: 0px;
+  }
+
+  table.list-inputs {
+    margin: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #333333;
+    border-collapse: collapse; }
+    input[type='checkbox'] {
+       margin-right: 3px; padding-right: 3px; }
+    table.list-inputs th {
+      text-align: left;
+      font-weight: bold;
+/*      font-variant: small-caps;*/
+      font-size: 1.25em;
+      letter-spacing: 2px;
+      padding-bottom: 20px;
+      padding-top: 15px; }
+      table.list-inputs th:nth-child(1) {
+        text-align: center;
+        padding-right: 25px; }
+    table.list-inputs tr {
+      border-top: 1px dotted #999999; }
+      table.list-inputs tr:nth-child(even) {
+        background-color: #dddddd;
+        border-bottom: 1px dotted #999999; }
+    table.list-inputs td {
+      text-align: left;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+      table.list-inputs td:nth-child(1) {
+        padding-right: 25px;
+        text-align: center; }
+      table.list-inputs td:nth-child(2) {
+        font-weight: bold;
+        font-size: 1.25em; }
+
+footer{
+  text-align: center;
+  font-size: .9em;
+  margin-top: 20px;  
+  margin-bottom: 20px;  
+}
+#rights{
+  text-align: center;
+}
+
+  
+#link_r {
+  float: right;
+}
