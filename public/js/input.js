@@ -52,6 +52,7 @@
       // Extract this:
       $(".field").val("");
       $("#provided").attr("checked", false);
+      $("#channel").focus();
     },
 
     createOnEnter: function (event) {
