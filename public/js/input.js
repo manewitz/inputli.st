@@ -29,6 +29,7 @@
         
     events: {
       "click #add-input":  "createInput",
+      "keypress"        :  "createOnEnter"
     },
         
     createInput: function () {
@@ -51,6 +52,12 @@
       // Extract this:
       $(".field").val("");
       $("#provided").attr("checked", false);
+    },
+
+    createOnEnter: function (event) {
+      if ( event.which == 13 ) {
+        this.createInput();
+      }
     },
     
     addInputTr: function (model) {
