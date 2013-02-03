@@ -1,3 +1,5 @@
+$("#channel").focus();
+
 (function ($) {
   
   Input = Backbone.Model.extend({
