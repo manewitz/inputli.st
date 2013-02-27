@@ -3,7 +3,6 @@ $("#channel").focus();
 (function ($) {
   
   Input = Backbone.Model.extend({
-    //Create a model to hold input atribute
     channel: null,
     name: null,
     mic: null,
@@ -12,10 +11,8 @@ $("#channel").focus();
   });
   
   InputList = Backbone.Collection.extend({
-    //This is our InputList collection and holds our Input models
     initialize: function (models, options) {
       this.bind("add", options.view.addInputTr);
-      //Listen for new additions to the collection and call a view function if so
     }
   });
   
@@ -25,8 +22,6 @@ $("#channel").focus();
         
     initialize: function () {
       this.input_list = new InputList( null, { view: this });
-      //Create a input_list collection when the view is initialized.
-      //Pass it a reference to this view to create a connection between the two
     },
         
     events: {
@@ -48,10 +43,9 @@ $("#channel").focus();
                                       provided:    provided_string,
                                       stand:       input_stand, });
                                           
-        //Add a new input model to our input collection
       this.input_list.add( input_model );
           
-      // Extract this:
+      // TODO: Extract this:
       $(".field").val("");
       $("#provided").attr("checked", false);
       $("#channel").focus();
@@ -64,14 +58,13 @@ $("#channel").focus();
     },
     
     addInputTr: function (model) {
-      //The parameter passed is a reference to the model that was added
       $("#input-list").append("<tr class='input'></tr>");
       $("#input-list tr:last").append("<td>" + model.get('channel') + "</td>");
       $("#input-list tr:last").append("<td>" + model.get('name') + "</td>");
       $("#input-list tr:last").append("<td>" + model.get('mic') + model.get('provided') + "</td>");
       $("#input-list tr:last").append("<td>" + model.get('stand') + "</td>");
-      //Use .get to receive attributes of the model
     },
+    
     displayBoolean: function(param) {
       if (param === true){
         return "*"
@@ -85,6 +78,7 @@ $("#channel").focus();
   var appview = new AppView;
 })($);
 
+// Google Analytics
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-38110744-1']);
 _gaq.push(['_trackPageview']);
