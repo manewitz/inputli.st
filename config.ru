@@ -1,3 +1,5 @@
+require 'newrelic_rpm'
+
 use Rack::Static, 
   urls: %w{/css /images /js /lib},
   root: "public"
