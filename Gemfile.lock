@@ -1,10 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    newrelic_rpm (3.6.0.78)
     rack (1.5.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  newrelic_rpm
   rack
