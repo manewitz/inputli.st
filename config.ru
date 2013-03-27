@@ -1,4 +1,5 @@
 require 'newrelic_rpm'
+require 'new_relic/agent/instrumentation/rack'
 
 use Rack::Static, 
   urls: %w{/css /images /js /lib},
