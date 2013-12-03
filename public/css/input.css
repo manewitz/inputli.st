@@ -7,7 +7,7 @@ html {
   font-family: 'Abel';
   font-style: normal;
   font-weight: 400;
-  src: local('Abel'), local('Abel-Regular'), url(lib/abel.woff) format('woff');
+  src: local('Abel'), local('Abel-Regular'), url(../lib/abel.woff) format('woff');
 }
 
 body {
