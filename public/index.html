@@ -4,12 +4,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <title>inputli.st</title>
-  
+
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+  <link href="css/input.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/favicon.ico">
-  
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -24,7 +26,7 @@
   <div>
     <header>
       <h1>inputli.st</h1>
-      <p class="text-muted">by <a href="mailto:mike.manewitz+inputlist@gmail.com">Mike Manewitz</a></p>
+      <p class="text-muted hidden-print">by <a href="mailto:mike.manewitz+inputlist@gmail.com">Mike Manewitz</a></p>
     </header>    
   </div>
   
@@ -38,28 +40,31 @@
       </tr>
     </thead>
 
+    <tfoot>
+      <td colspan=4 class="text-center text-muted">* = supplied by artist</td>
+    </tfoot>
+
     <tbody>
     </tbody>
 
   </table>
-  
-  <br>
-  <br>
-  
-  <input type="text"  placeholder="ch #"   name="channel"  id="channel"  class="field" size="2">
-  <input type="text"  placeholder="name"   name="name"     id="name"     class="field">
-  <input type="text"  placeholder="mic"    name="mic"      id="mic"      class="field">
-  <input type="text"  placeholder="stand"  name="stand"    id="stand"    class="field">
-  
-  <input type="checkbox" name="provided" id="provided" class="field">
-  <label for="provided">provided by artist?</label>
+
   <br>
 
-  <input type="submit" id="add-input" value="Add Input">
-   
-  <div class="container text-center">
+  <form class="form-inline hidden-print">
+    <input class="field" type="text"  placeholder="ch #"   name="channel"  id="channel"   size="4">
+    <input class="field" type="text"  placeholder="name"   name="name"     id="name">
+    <input class="field" type="text"  placeholder="mic"    name="mic"      id="mic">
+    <input class="field" type="text"  placeholder="stand"  name="stand"    id="stand">
+    <input class="field" type="checkbox"                   name="provided" id="provided">
+    <label for="provided">supplied by artist?</label> <br>
+
+    <input type="submit" id="add-input" value="Add Input">
+  </form>
+
+  <div class="container text-center hidden-print">
     <footer class="text-muted">
-      <a class="text-muted href="http://inputli.st">inputli.st</a>
+      <a href="http://inputli.st">inputli.st</a>
       <br>
       &copy 2013 Mike Manewitz
       <br>

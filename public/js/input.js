@@ -1,7 +1,7 @@
 $("#channel").focus();
 
 (function ($) {
-  
+
   Input = Backbone.Model.extend({
     channel: null,
     name: null,
@@ -9,27 +9,27 @@ $("#channel").focus();
     provided: null,
     stand: null,
   });
-  
+
   InputList = Backbone.Collection.extend({
     initialize: function (models, options) {
       this.bind("add", options.view.addInputTr);
     }
   });
-  
+
   AppView = Backbone.View.extend({
-		    
+
     el: $("body"),
-        
+
     initialize: function () {
       this.input_list = new InputList( null, { view: this });
     },
-        
+
     events: {
-      "click #add-input":  "createInput",
-      "keypress"        :  "createOnEnter"
+      "submit form"    :  "createInput"
     },
-        
-    createInput: function () {
+
+    createInput: function (event) {
+      event.preventDefault();
       var input_channel   = $("#channel").val();
       var input_name      = $("#name").val();
       var input_mic       = $("#mic").val();
@@ -37,34 +37,28 @@ $("#channel").focus();
       var input_stand     = $("#stand").val();
       var provided_string = this.displayBoolean(input_provided);
           
-      var input_model   = new Input({ channel:     input_channel , 
-                                      name:        input_name, 
-                                      mic:         input_mic,
-                                      provided:    provided_string,
-                                      stand:       input_stand, });
-                                          
+      var input_model = new Input({ channel:     input_channel , 
+                                    name:        input_name, 
+                                    mic:         input_mic,
+                                    provided:    provided_string,
+                                    stand:       input_stand, });
+
       this.input_list.add( input_model );
-          
+
       // TODO: Extract this:
       $(".field").val("");
       $("#provided").attr("checked", false);
       $("#channel").focus();
     },
 
-    createOnEnter: function (event) {
-      if ( event.which == 13 ) {
-        this.createInput();
-      }
-    },
-    
     addInputTr: function (model) {
       $("#input-list tbody").append("<tr class='input'></tr>");
       $("#input-list tr:last").append("<td>" + model.get('channel') + "</td>");
-      $("#input-list tr:last").append("<td>" + model.get('name') + "</td>");
+      $("#input-list tr:last").append("<td><strong>" + model.get('name') + "</strong></td>");
       $("#input-list tr:last").append("<td>" + model.get('mic') + model.get('provided') + "</td>");
       $("#input-list tr:last").append("<td>" + model.get('stand') + "</td>");
     },
-    
+
     displayBoolean: function(param) {
       if (param === true){
         return "*"
@@ -74,7 +68,7 @@ $("#channel").focus();
       }
     }
   });
-  
+
   var appview = new AppView;
 })($);
 
