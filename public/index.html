@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>  
-  <title>inputli.st</title>
-  <link href="css/input.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  <title>inputli.st</title>
+  
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/favicon.ico">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 
 <body>
-<div class="wrapper">  
+<div class="container">  
   
-  <header>
-    <h1><a href="http://inputli.st/">inputli.st</a></h1>
-    <h3>by <a href="mailto:mike.manewitz+inputlist@gmail.com">Mike Manewitz</a></h3>
-  </header>
+  <div>
+    <header>
+      <h1>inputli.st</h1>
+      <p class="text-muted">by <a href="mailto:mike.manewitz+inputlist@gmail.com">Mike Manewitz</a></p>
+    </header>    
+  </div>
   
-  <table id="input-list" class="list-inputs">
-    <tr>
-      <th>ch</th>
-      <th>source</th>
-      <th>mic</th>
-      <th>mic stand</th>
-    </tr>
+  <table id="input-list" class="list-inputs col-md-10 table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>ch</th>
+        <th>source</th>
+        <th>mic</th>
+        <th>mic stand</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    </tbody>
 
   </table>
   
@@ -38,19 +56,24 @@
   <br>
 
   <input type="submit" id="add-input" value="Add Input">
-  
-  <footer>
-    &copy 2013 Mike Manewitz
-    <br>
-    <a href="mailto:mike.manewitz+inputlist@gmail.com">email</a> | 
-    <a href="http://github.com/manewitz/inputli.st">github</a> | 
-    <a href="http://twitter.com/inputlist">twitter</a>
-  </footer>
+   
+  <div class="container text-center">
+    <footer class="text-muted">
+      <a class="text-muted href="http://inputli.st">inputli.st</a>
+      <br>
+      &copy 2013 Mike Manewitz
+      <br>
+      <a href="mailto:mike.manewitz+inputlist@gmail.com">email</a> | 
+      <a href="http://github.com/manewitz/inputli.st">github</a> | 
+      <a href="http://twitter.com/inputlist">twitter</a>
+    </footer>
+  </div>
   
     <script src="js/jquery-1.9.0.min.js"></script>
     <script src="js/underscore-min.js"></script>
     <script src="js/backbone-min.js"></script>
     <script src="js/input.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   
 </div>
 </body>

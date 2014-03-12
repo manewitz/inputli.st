@@ -58,7 +58,7 @@ $("#channel").focus();
     },
     
     addInputTr: function (model) {
-      $("#input-list").append("<tr class='input'></tr>");
+      $("#input-list tbody").append("<tr class='input'></tr>");
       $("#input-list tr:last").append("<td>" + model.get('channel') + "</td>");
       $("#input-list tr:last").append("<td>" + model.get('name') + "</td>");
       $("#input-list tr:last").append("<td>" + model.get('mic') + model.get('provided') + "</td>");
